@@ -33,6 +33,7 @@ class Contest extends React.Component{
               maxDownCon = con.contestId;
             }
             });
+            // console.log(maxDownCon)
             //problems
             var problems = {};
             for (var i = this.props.data.length - 1; i >= 0; i--) {
@@ -79,7 +80,7 @@ class Contest extends React.Component{
                 const unsolvedList =unsolved.map(p=>{
                     if(p!==undefined) {
                         return (
-                            <div className="col s3 m2 l2"><a href={con_url+p} target="_blank" style={{display:"inline-block"}}>
+                            <div className="col s3 m2 l2"><a href={con_url+p.split('-')[0]+'/problem/'+p.split('-')[1]} target="_blank" style={{display:"inline-block"}}>
                                 {p}
                             </a>
                             </div>
@@ -156,7 +157,7 @@ class Contest extends React.Component{
                                 </tr>
                                 <tr className="hoverable" style={{borderRadius:"10px"}}>
                                     <td>Max attempts</td>
-                                    <td className="right">{maxAttempt}<a href={con_url+maxAttemptProblem} target="_blank">({maxAttemptProblem})</a></td>
+                                    <td className="right">{maxAttempt}<a href={con_url+maxAttemptProblem.split('-')[0]+'/problem/'+maxAttemptProblem.split('-')[1]} target="_blank">({maxAttemptProblem})</a></td>
                                 </tr>
                                 <tr className="hoverable" style={{borderRadius:"10px"}}>
                                     <td>Solved with one submission</td>
@@ -164,7 +165,7 @@ class Contest extends React.Component{
                                 </tr>
                                 <tr className="hoverable" style={{borderRadius:"10px"}}>
                                     <td>Max AC(s)</td>
-                                    <td className="right">{maxAc}<a href={con_url+maxAcProblem} target="_blank">({maxAcProblem})</a></td>
+                                    <td className="right">{maxAc}<a href={con_url+maxAcProblem.split('-')[0]+'/problem/'+maxAcProblem.split('-')[1]} target="_blank">({maxAcProblem})</a></td>
                                 </tr>
                             </tbody>
                         </table>
