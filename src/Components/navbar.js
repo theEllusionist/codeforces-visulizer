@@ -23,7 +23,7 @@ class Navbar extends React.Component{
                             className="material-icons">menu</i></a>
                         <ul className="right hide-on-med-and-down">
                             <li><Link target="_blank" to="/">Home</Link></li>
-                            <li><Link target="_blank" to="/problem">Problems Solved</Link></li>
+                            <li><Link  to="/problem" target="_blank" onClick={(event) => {event.preventDefault(); window.open(this.makeHref("route"));}}>Problems Solved</Link></li>
                             <li><Link target="_blank" to='/compare_problems'>Compare Problems</Link></li>
                         </ul>
                     </div>
