@@ -30,16 +30,16 @@ class Compare extends React.Component{
         const m1={};
         const m2={};
         for(var i=0;i<this.state.data2.length;i++){
-            var sub = this.state.data2[i];
-            var problemId = sub.problem.contestId + '-' + sub.problem.index;
+            const sub = this.state.data2[i];
+            const problemId = sub.problem.contestId + '-' + sub.problem.index;
             if(this.state.data2[i].verdict==="OK"){
                 if(sub.problem.rating!==undefined)
                     m1[problemId] = sub.problem.rating
             }
         }
         for(i=0;i<this.state.data1.length;i++){
-            var sub = this.state.data1[i];
-            var problemId = sub.problem.contestId + '-' + sub.problem.index;
+            const sub = this.state.data1[i];
+            const problemId = sub.problem.contestId + '-' + sub.problem.index;
             if(this.state.data1[i].verdict==="OK"){
                 if(m1[problemId]===undefined)
                     if(sub.problem.rating!==undefined)
@@ -61,7 +61,7 @@ class Compare extends React.Component{
         }
 
         const prob=[];
-        for(var i=0;i<p.length;i++){
+        for(i=0;i<p.length;i++){
             let d={
                 rating:p[i][0],
                 id:p[i][1],

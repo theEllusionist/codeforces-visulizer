@@ -26,7 +26,7 @@ class Levels extends React.Component{
         for (var x in prob) {
             d.push([x,prob[x]])
         }
-        d.sort()
+        d.sort();
 
         for(i=0;i<d.length;i++){
             data.push(d[i])

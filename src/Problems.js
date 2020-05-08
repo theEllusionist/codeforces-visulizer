@@ -54,7 +54,7 @@ class Problems extends React.Component {
         }
 
         const prob=[];
-        for(var i=0;i<p.length;i++){
+        for(i=0;i<p.length;i++){
             let d={
                 rating:p[i][0],
                 id:p[i][1],

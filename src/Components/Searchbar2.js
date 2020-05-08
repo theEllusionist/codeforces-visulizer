@@ -21,7 +21,7 @@ render() {
                 <div className="col center s10 push-s1 white" style={{border:"2px solid white",marginTop:20,borderRadius:"10px",opacity:.7}} >
                     <input type="text" className="col s12 m6 l6" id="search1" placeholder="Codeforces User Handle1" onChange={this.handleChange}/>
                     <input type="text" className="col s12 m6 l6" id="search2" placeholder="Codeforces User Handle2" onChange={this.handleChange}/>
-                    <button type="submit" className="waves-effect waves-light btn">Compare</button>
+                    <button type="submit" className="waves-effect waves-light  btn">Compare</button>
                 </div>
             </form>
         )

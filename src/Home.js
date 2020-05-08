@@ -71,6 +71,9 @@ class Home extends React.Component{
                 <div className="row container">
                     <Contest user={this.state.search} user_data={this.state.user_data} data={this.state.data}/>
                 </div>
+                {/*<div className="row container">*/}
+                {/*    <HeatMap user={this.state.search} user_data={this.state.user_data} data={this.state.data} />*/}
+                {/*</div>*/}
             </div>
   )
  }

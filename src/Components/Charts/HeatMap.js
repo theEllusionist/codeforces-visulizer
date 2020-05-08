@@ -2,6 +2,7 @@ import React from "react";
 import {Chart} from "react-google-charts";
 
 class HeatMap extends React.Component{
+
    render() {
        const mp={};
        for(var i=0;i<this.props.data.length;i++){
@@ -16,17 +17,21 @@ class HeatMap extends React.Component{
         for(var x in mp ) {
             data.push([new Date(parseInt(x)),mp[x]]);
         }
-        var y=0;
+        var y=0,a=0,b=0;
         if(this.props.data.length>0){
-            y=new Date(this.props.data[0].creationTimeSeconds * 1000).getYear();
+            a=new Date(this.props.data[0].creationTimeSeconds * 1000).getYear();
         }
-        console.log(y)
+        if(this.props.data.length>0){
+            b=new Date(this.props.data[this.props.data.length-1].creationTimeSeconds * 1000).getYear();
+        }
+        y=a-b;
+        y=Math.abs(y) + 1;
        return(
            <div>
                {this.props.data.length>0&&
                    <Chart
                       width={"100%"}
-                      height={y+300}
+                      height={y*140+30}
                       className="center col s12 z-depth-2"
                       chartType="Calendar"
                       // loader={<div>Loading Chart</div>}
