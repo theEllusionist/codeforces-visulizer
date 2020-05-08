@@ -1,8 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import M from 'materialize-css/dist/js/materialize.min.js';
+import M from  'materialize-css/dist/js/materialize.min.js';
 import 'materialize-css/dist/css/materialize.min.css';
-
 class Navbar extends React.Component{
      componentDidMount() {
         var elem = document.querySelector(".sidenav");
